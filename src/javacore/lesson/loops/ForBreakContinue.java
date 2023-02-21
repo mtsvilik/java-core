@@ -1,4 +1,4 @@
-package javacore.lesson;
+package javacore.lesson.loops;
 
 public class ForBreakContinue {
 

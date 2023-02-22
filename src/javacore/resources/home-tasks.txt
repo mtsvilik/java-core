@@ -25,5 +25,104 @@ mail
 gmail
 Продемонстрируйте данный метод.
 
+4. Encapsulation
+
+1. Создайте класс Student со следующими переменными:
+name (используйте StringBuilder),
+course, grade. Примените инкапсуляцию к данному классу.
+Длина имени объектов не должна быть менее 3-х символов,
+оценки должны быть числами в интервале от 1 до 10,курс должен быть числом от 1 до 4 включительно.
+Создайте метод showInfo, который будет выводить всю информацию о студенте,
+не используя переменные класса напрямую. Создайте класс TestStudent,
+в котором создайте объект класса Student, придайте его переменным значения. Произведите вызов метода showInfo.
+
+5. Inheritance
+
+1. Создайте класс Animal. При вызове его конструктора пусть на экран выводится “I am animal”.
+В классе пусть будут переменная eyes, характеризующая количество глаз;
+методы eat (выводящий на экран “Animal eats”) и drink (выводящий на экран “Animal drinks”).
+Создайте класс Pet, который является child классом класса Animal.
+При вызове его конструктора пусть на экран выводится “I am pet” и переменной eyes придаётся значение
+В классе пусть будут переменные name; tail, характеризующая количество хвостов и равная 1;
+paw, характеризующая количество лап и равная 4; методы run (выводящий на экран “Pet runs”)
+и jump (выводящий на экран “Pet jumps”).
+Создайте класс Dog, который является child классом класса Pet.
+При вызове его конструктора с параметром, который будет передавать имя, пусть на экран
+выводится “I am dog and my name is: ” + имя питомца. В класс добавьте метод play (выводящий на экран “Dog plays”).
+Создайте класс Cat, который является child классом класса Pet.
+При вызове его конструктора с параметром, который будет передавать имя,
+пусть на экран выводится “I am cat and my name is: ” + имя питомца.
+В класс добавьте метод sleep (выводящий на экран “Cat sleeps”).
+Создайте класс Test, в методе main которого выведите на экран количество лап объекта
+класса Dog и вызовите метод sleep объекта класса Cat.
+
+6. Overriding Hiding Final
+
+Test 1
+Каков будет результат компиляции и запуска класса Y?
+package p1; public class X{
+X() {}
+public void abc() { System.out.println(‘X’); } }
+------------------------------------------------------------------------------------------------- package p2;
+import p1.*;
+public class Y extends X{
+Y() {}
+public void abc() { System.out.println(‘Y’); } public static void main(String[] args){
+Y y = new Y();
+y.abc(); }
+}
+
+Test 2
+Каков будет результат компиляции и запуска класса Y?
+package p1;
+public class X{
+protected void abc() { System.out.println('X'); }
+} ------------------------------------------------------------------------------------ package p2;
+import p1.*;
+public class Y extends X {
+public void abc()
+public void def()
+public void ghi()
+public static void main(String[] args)
+{ Y a = new Y(); a.abc(); a.def(); }
+
+Test 3
+Каков будет результат компиляции и запуска классов X и Y?
+public class X{
+public X() { System.out.println(“X”); }
+public X(int i) { System.out.println(“X” + i); } private boolean abc() { return false; } public static void main(String[] args) {
+X x= new Y(18);
+System.out.println( x.abc() );
+}
+}
+class Y extends X{
+public Y(int i) { System.out.println(“Y”); } public boolean abc () { return true; }
+}
+
+Test 4
+Каков будет результат компиляции и запуска класса Test?
+class X {}
+class Y extends X {}
+public class Test {
+public static void abc(X x, Y y)
+{
+System.out.println(“privet");
+}
+public static void abc(Y y, X x) {
+System.out.println(“poka"); }
+public static void main(String[] args) { Y a = new Y ();
+abc(a, a);
+} }
+
+Test 5
+Каков будет результат компиляции и запуска класса Test?
+class X{
+String s1 = “privet"; }
+class Y extends X { boolean bool = false; }
+class Test {
+public static void main(String args[]) { X x = new Y ();
+System.out.println(x.s1 + “ ” + x.bool); }
+}
+
 
 

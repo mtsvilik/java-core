@@ -1,4 +1,4 @@
-package javacore.lesson.methods;
+package javacore.lesson.methodininterface.methods;
 
 public class Square extends Shape {
 

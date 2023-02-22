@@ -1,6 +1,4 @@
-package javacore.lesson.methods;
-
-import javacore.lesson.methods.Shape;
+package javacore.lesson.methodininterface.methods;
 
 public class Rectangle extends Shape {
 
